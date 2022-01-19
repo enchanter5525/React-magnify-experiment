@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import InnerImageZoom from 'react-inner-image-zoom';
+import Slick from 'react-slick';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Slick dots={true}>
+          <InnerImageZoom
+            src="apple1.jfif"
+            width={400}
+            height={400}
+            fullscreenOnMobile={true}
+          />
+          <InnerImageZoom
+            src="apple2.jpg"
+            width={400}
+            height={400}
+            fullscreenOnMobile={true}
+          />
+          <InnerImageZoom
+            src="apple3.jfif"
+            width={400}
+            height={400}
+            fullscreenOnMobile={true}
+          />
+    </Slick>/
     </div>
   );
 }
